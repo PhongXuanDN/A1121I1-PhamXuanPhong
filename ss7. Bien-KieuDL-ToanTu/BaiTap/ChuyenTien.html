@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <input type="text" id="numberr">
+        From Currency
+        <select >
+            <option id="VN">Việt Nam</option>
+        </select>
+        To Currency
+        <select name="aa">
+            <option id="USA">USA</option>
+        </select>
+        <button onclick="showKQ()" >Convert</button>
+        <p id="result"></p>
+<script>
+    function showKQ() {
+        let number = parseInt(document.getElementById("numberr").value)
+        let tien = number * 0.0523;
+        document.getElementById("result").innerText = "So tien: "+tien;
+    }
+</script>
+</body>
+</html>
