@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            document.write('Bai 1: ')
+            document.write('<br/>')
+            let i = 10
+            let f = 20.5
+            let b = true
+            let s = 'Hà Nội'
+
+            document.write('i = ' + i)
+            document.write('<br/>')
+            document.write('f = ' + f)
+            document.write('<br/>')
+            document.write('b = ' + b)
+            document.write('<br/>')
+            document.write('s = ' + s)
+            document.write('<br/>')
+            document.write('<br/>')
+            document.write('Bai 2: ')
+            document.write('<br/>')
+            let cDai = 20
+            let cRong = 10
+            let DienTich = cDai * cRong
+            document.write('Dien Tich = ' + DienTich)
+            document.write('<br/>')
+            document.write('<br/>')
+            document.write('Bai 3: ')
+            document.write('<br/>')
+            document.write('<button onclick="showPrompt()">Comfirm</button>')
+            function showPrompt() {
+            let a= prompt('Nhập vào số a:')
+                let b = prompt('Nhập vào số b:')
+                if((a % b) == 0)
+                    alert('a la boi so cua b')
+                else
+                    alert('a khong la boi so cua b')
+            }
+        </script>
+</body>
+</html>
