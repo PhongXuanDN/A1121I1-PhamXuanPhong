@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let InputYear = parseInt(prompt('Nhap vao nam:'))
+        if(InputYear % 4 == 0 )
+            if(InputYear % 100 ==0)
+                    if(InputYear % 400 ==0)
+                alert('Nam '+InputYear+' la nam nhuan')
+                    else
+                        alert('Nam '+InputYear+' la nam khong nhuan')
+            else
+                alert('Nam '+InputYear+' la nam nhuan')
+        else
+            alert('Nam '+InputYear+' la nam khong nhuan')
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let User = prompt('Nhap nguoi dung: ')
+        if(User == 'Admin') {
+            let Password = prompt('Nhap mat khau: ')
+            if(Password == 'TheMaster')
+                alert('Wellcome')
+            else if(Password == '')
+                alert('Null')
+            else
+                alert('Wrong Password')
+        }
+        else if(User =='')
+            alert('Null')
+        else
+            alert('I dont know you')
+    </script>
+</body>
+</html>
