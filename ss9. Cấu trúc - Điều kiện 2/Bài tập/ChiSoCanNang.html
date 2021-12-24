@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <button onclick="SoSanh()">Xem Kết Quả</button>
+    <br>
+    <scan id="result"></scan>
+    <script>
+        function SoSanh() {
+            number = parseInt(document.getElementById("number").value)
+            if (number < 18)
+                document.getElementById("result").innerText= "Underweight"
+            else if (number < 25.0)
+                document.getElementById("result").innerText= "Normal"
+            else if (number < 30.0)
+                document.getElementById("result").innerText= "Overweight"
+            else
+            document.getElementById("result").innerText= "Obese"
+        }
+    </script>
+</body>
+</html>

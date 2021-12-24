@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #MayTinh{
+            border: black 3px solid;
+
+        }
+        td{
+            height: 40px;
+            width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table id="MayTinh" border="1">
+        <tr>
+            <td colspan="4" style="border: 1px black solid; font-size: large; text-align: right">
+                <p id="result"></p>
+            </td>
+        </tr>
+        <tr>
+            <td onclick="pressNumber('1')">1</td>
+            <td onclick="pressNumber('2')">2</td>
+            <td onclick="pressNumber('3')">3</td>
+            <td onclick="pressOperator('+')">+</td>
+        </tr>
+        <tr>
+            <td onclick="pressNumber('4')">4</td>
+            <td onclick="pressNumber('5')">5</td>
+            <td onclick="pressNumber('6')">6</td>
+            <td onclick="pressOperator('-')">-</td>
+        </tr>
+        <tr>
+            <td onclick="pressNumber('7')">7</td>
+            <td onclick="pressNumber('8')">8</td>
+            <td onclick="pressNumber('9')">9</td>
+            <td onclick="pressOperator('*')">*</td>
+        </tr>
+        <tr>
+            <td onclick="pressC()">C</td>
+            <td onclick="pressNumber('0')">0</td>
+            <td onclick="equal()">=</td>
+            <td onclick="pressOperator('/')">/</td>
+        </tr>
+
+    </table>
+    <script>
+        let result = 0;
+        let resultDisplay = document.getElementById("result");
+        function pressNumber(num) {
+            if(resultDisplay === '')
+            resultDisplay.innerHTML= num;
+            else if(result === 0){
+                resultDisplay.innerHTML += num;
+            }else {
+                resultDisplay.innerHTML = num
+                result =0
+            }
+        }
+        function pressOperator(operator) {
+            resultDisplay.innerHTML += operator;
+            result = 0;
+        }
+        function equal() {
+            result =eval(resultDisplay.innerHTML)
+            resultDisplay.innerHTML = result
+        }
+        function pressC() {
+            resultDisplay.innerHTML = ''
+            result = 0
+        }
+    </script>
+</body>
+</html>
