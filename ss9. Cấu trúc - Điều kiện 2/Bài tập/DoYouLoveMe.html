@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" style="text-align: center ;">
+    <tr>
+        <td colspan="2">Do You Love Me???</td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ClickYes()">Yes</button>
+        </td>
+        <td>
+            <button onclick="ClickNo()">No</button>
+        </td>
+    </tr>
+</table>
+    <span id="result"></span>
+<script>
+    function ClickYes() {
+        document.getElementById("result").innerText = "<3"
+    }
+    function ClickNo() {
+        document.getElementById("result").innerText = "Nhảy ngẫu nhiên :(("
+    }
+</script>
+</body>
+</html>
