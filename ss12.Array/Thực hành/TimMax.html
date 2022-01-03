@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let array = [2,8,4,5,6,2,1,4,87,5,4]
+        let max = array[0]
+        document.write("Mang array :")
+        for (let i=0;i<array.length;i++){
+            document.write(array[i]+",")
+        }
+        document.write("<br>")
+        for(let i=1; i<array.length;i++){
+            if(max < array[i])
+                max = array[i]
+        }
+        document.write("Gia tri lon nhat cua mang la: "+max)
+    </script>
+</body>
+</html>

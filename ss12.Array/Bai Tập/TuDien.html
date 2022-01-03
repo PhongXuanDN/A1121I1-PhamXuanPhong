@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="tieng_anh" type="text">
+    <button onclick="DichTiengAnh()">Dịch</button>
+    <br>
+    <span id="result">Chỉ được nhập các từ này (one, two, three, four, fine, six, seven)</span>
+    <script>
+        tieng_anh = document.getElementById("tieng_anh").value;
+        let TAnh = ["one","two","three", "four","fire","six","seven"];
+        let TViet = ["một","hai","ba","bốn","năm", "sáu","bảy"];
+        function DichTiengAnh() {
+            let check = false
+            for(let i= 0;i<TAnh.length;i++){
+                if(tieng_anh===TAnh[i]) {
+                    document.getElementById("result").innerText = TViet[i]
+                    check = true
+                }
+            }
+            if(check===false)
+                document.getElementById("result").innerText = "Từ này không tồn tại"
+        }
+    </script>
+</body>
+</html>
+</html>
