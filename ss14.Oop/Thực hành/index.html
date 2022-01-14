@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function DienThoai(ten, hangSX) {
+            var ten = ten;
+            var hangSX = hangSX;
+
+            //this đại điện cho đối tượng hiện hành đang truy cập
+            this.goidien= function () {
+
+            }{
+                document.write(ten + " đang gọi điện <br>")
+            }
+        }
+        // Tạo đối tượng
+        let dienthoai1 = new DienThoai("Iphone 12", "Apple")
+        dienthoai1.goidien()
+
+        let dienthoai2 = new DienThoai("SamSung S22", "Adroid")
+        dienthoai2.goidien()
+    </script>
+</body>
+</html>

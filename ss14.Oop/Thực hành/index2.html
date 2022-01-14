@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class DienThoai{
+            constructor(ten, hangSX) {
+                // this.ten =  ten;
+                // this.hangSX = hangSX;
+
+            }
+            goiDien(){
+                document.write(this.ten + "đang gọi điện <br>")
+            }
+            setTen(tenmoi){
+                this.ten = tenmoi
+            }
+            getTen(){
+                return this.ten
+            }
+        }
+        let dienthoai1 = new DienThoai("Iphone 12", "Apple")
+        dienthoai1.goiDien()
+
+        let dienthoai2 = new DienThoai("SamSung S22", "Adroid")
+        dienthoai2.goiDien()
+    </script>
+</body>
+</html>

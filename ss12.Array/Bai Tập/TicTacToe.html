@@ -5,8 +5,80 @@
     <title>Title</title>
 </head>
 <body>
-
+<h3>Tic Tac Toe</h3>
+<p id="board"></p>
     <script>
+    let board = document.getElementById("board")
+        let arr = []
+        let data = ""
+        let checkPlayer =  true
+        function addArray(array) {
+            for(let i=0; i<5;i++){
+                array[i] = Array["","","","",""];
+            }
+
+        }
+        
+        function displayBoard() {
+            data = "<table border = '1'> ";
+            for (let i = 0; i<5;i++){
+                data += "<tr>";
+                for (let j= 0 ;j<5; j++){
+                    data += "<td onclick='changeValue(" + i + "," + j + ")'>" + arr[i][j] + "</td>"
+                }
+                data += "</tr>"
+            }
+            data += "</table>"
+            board.innerHTML = data;
+        }
+
+        function changeValue(x,y) {
+            if (checkPlayer && checkExist(x,y)){
+                arr[x][y] = "X"
+                checkPlayer = false;
+                if(checkWin("X")){
+                    alert("Người Player X thằng")
+                }
+            }
+            else if(!checkPlayer && checkExist(x,y)) {
+                arr[x][y] = "O"
+                checkPlayer = true
+                if(checkWin("0")){
+                    alert("Người Player 0 thằng")
+                }
+            }
+            displayBoard();
+        }
+        
+        function checkExist(x,y) {
+            if(arr[x][y]!== "")
+                alert("Error!!!");
+                return false;
+        }
+        
+        function checkWin(player) {
+            for (let i =0; i<5; i++)
+                for(let j=0 ; j< 5 ; j++){
+                    if(arr[i][j]===player){
+                        if(arr[i][j+1] === player && arr[i][j+2]){
+                            return true;
+                        }
+                        if(arr[i+1][j] === player && arr[i+2][j]){
+                            return true;
+                        }
+                        if(arr[i]+1[j+1] === player && arr[i+2][j+2]){
+                            return true;
+                        }
+                        if(arr[i+1][j-1] === player && arr[i+2][j-2]){
+                            return true;
+                        }
+                    }
+                }
+
+        }
+        addArray(arr);
+
+        displayBoard();
 
     </script>
 </body>

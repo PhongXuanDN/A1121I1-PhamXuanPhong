@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+            let myDate = function(dayy,monthh, yearr){
+                this.dayy = dayy;
+                this.monthh = monthh;
+                this.yearr = yearr;
+
+            this.getDay= function(){
+                return this.dayy
+            }
+            this.getMonth = function(){
+                return this.monthh
+            }
+            this.getYear = function(){
+                return this.yearr
+            }
+            this.setDay= function(newDay){
+                this.dayy = newDay
+            }
+            this.setMonth= function(newMonth){
+                this.monthh = newMonth
+            }
+            this.setYear=function(newYear){
+                this.yearr = newYear
+            }
+        }
+        let myyDate = new myDate(23,08,1999)
+        let day = myyDate.getDay();
+        let month = myyDate.getMonth();
+        let year = myyDate.getYear();
+        alert("ngày "+day+ " tháng "+ month+" năm "+year)
+        myyDate.setDay(1);
+        myyDate.getMonth(1);
+        myyDate.setYear(2022);
+        alert("ngày "+day+ " tháng "+ month+" năm "+year)
+
+    </script>
+</body>
+</html>

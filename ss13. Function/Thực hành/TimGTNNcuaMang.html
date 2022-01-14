@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr1 = [3,5,1,4,8,6,2,7,5]
+        let arr2 = [2,8,4,69,5,2,4,8]
+        let arr3 = [10,15,17,25,35,75]
+        let arr4 = [25,85,99,87,64,53,39,38]
+        function GTNN(arr) {
+            let minArr = arr[0]
+            for (let i=0;i<arr.length;i++){
+                if(minArr<arr[i])
+                    minArr==arr[i]
+            }
+            return minArr;
+
+        }
+        alert(GTNN(arr4))
+
+    </script>
+</body>
+</html>

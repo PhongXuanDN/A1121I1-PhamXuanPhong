@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let hinhTron = function (radius) {
+        this.radius = radius
+    this.getRadius = function () {
+        return radius;
+    }
+    this.getArea = function () {
+        return Math.PI * radius * radius   
+    }
+    }
+    let HTron = new hinhTron(3)
+    let radius = HTron.getRadius()
+    let area = HTron.getArea()
+    alert("radius: "+radius + " area: "+ area)
+
+</script>
+</body>
+</html>

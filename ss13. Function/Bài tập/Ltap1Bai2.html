@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="Number" type="number">
+    <button onclick="Tang()">Xuất</button>
+    <br>
+    <h3 id="result">
+    <script>
+        function Tang() {
+            let num = parseInt(document.getElementById("Number").value)
+            num++;
+            document.getElementById("result").innerText = num
+        }
+    </script>
+</body>
+</html>

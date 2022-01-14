@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px"></canvas>
+    <script>
+        class Rectangle{
+            constructor(cDai, cRong) {
+                this.cDai = cDai
+                this.cRong = cRong
+            }
+            getDienTich(){
+                return (this.cDai * this.cRong)
+            }
+            getChuVi(){
+                return (this.cDai+this.cRong)*2
+            }
+            setcDai(chieudai){
+                this.cDai = chieudai
+            }
+            setcRong(chieurong){
+                this.cRong = chieurong
+            }
+
+        }
+        let HinhCN = new Rectangle(3,4)
+        let DienTich = HinhCN.getDienTich()
+        let ChuVi = HinhCN.getChuVi()
+        alert("Dien Tich HCN la: "+DienTich+"; Chu vi HCN la: "+ChuVi)
+
+    </script>
+</body>
+</html>
