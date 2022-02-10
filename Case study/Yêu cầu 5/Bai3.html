@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập vào chiều dài của mảng"))
+    let column = parseInt(prompt("Nhập vào chiều cao của mảng"))
+    let array = []
+    for(let i =0 ;i<row;i++){
+        array[i] = []
+        for(let j= 0 ;j<column;j++){
+            array[i][j] = parseInt(prompt("a["+i+"]["+j+"]= "))
+        }
+    }
+    for (let i=0;i<row;i++){
+        for(let j=0;j<column;j++){
+            document.write("["+i+"]["+j+"]= "+array[i][j])
+        }
+        document.write("<br>")
+    }
+    let minMang = array[0][0]
+    let maxMang = array[0][0]
+    for (let i=0;i<row;i++) {
+        for (let j = 0; j < column; j++) {
+            if(array[i][j]<minMang)
+                minMang = array[i][j]
+            if(array[i][j]>maxMang)
+                maxMang = array[i][j]
+        }
+    }
+    document.write("Giá trị lớn nhất trong mảng là: "+maxMang+"<br>")
+    document.write("Giá trị nhỏ nhất trong mảng là: "+minMang)
+
+
+</script>
+</body>
+</html>

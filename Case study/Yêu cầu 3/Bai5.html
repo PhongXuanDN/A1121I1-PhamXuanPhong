@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="chonMon()">Chọn món</button>
+<br>
+<script>
+        document.write("Menu <br>")
+        let arrayMon = new Array("Cafe", "Cam văt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa", "Thoát gọi món")
+        let arrayTien = new Array(15000,25000,30000,30000,10000,20000)
+        for(let i = 0; i<arrayMon.length;i++){
+            j=i+1
+            document.write(j+". "+arrayMon[i]+"<br>")
+        }
+        function chonMon() {
+        let arraychon = new Array()
+        let dem = 0;
+        let tongTien = 0;
+        let Mon
+        while(Mon!=7){
+            Mon = parseInt(prompt("Mời bạn chọn món"))
+            arraychon[dem]=Mon
+            dem++
+        }
+        document.write("Danh sách các món vừa gọi là: <br>")
+        for(let i= 0; i<arraychon.length-1;i++){
+            document.write(arrayMon[arraychon[i]]+"<br>")
+            tongTien = tongTien + arrayTien[arraychon[i]]
+        }
+        document.write("Tổng tiền của quý khách là: "+ tongTien)
+
+    }
+
+</script>
+</body>
+</html>

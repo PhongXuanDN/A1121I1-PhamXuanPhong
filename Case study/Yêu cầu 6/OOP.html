@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function chonSo() {
+        for (let j = 0; j < 6; j++) {
+            document.write("<select>")
+            for (let i = 0; i < 100; i++) {
+                document.write("<option>" + i + "</option>")
+            }
+            document.write("</select>")
+
+        }
+        document.write("<br>")
+
+    }
+    function soLuot() {
+        let count = 0
+        while (count<4) {
+            let KT = confirm("Bạn có muốn mua thêm vé số???")
+            if(KT) {
+                chonSo()
+                count++
+                alert("Số vé hiện tại của bạn là: "+count)
+            }else
+                break;
+        }
+        if(count==4)
+            alert("Bạn đã đạt giới hạn")
+        document.write("<button onclick=''>" + "Hoàn tất" + "</button>")
+    }
+    function randomNumber() {
+        return Math.floor(Math.random () * 99 + 0);
+    }
+    function randomVeso(){
+        let array = Array(6)
+        for(let i =0;i<array.length;i++){
+            array[i]= randomNumber()
+        }
+        for(let i =0;i<array.length;i++){
+            document.write(array[i]+"      ")
+        }
+    }
+    function tiepTuc(){
+        let count = 0
+        while (count<4) {
+            let KT = confirm("Bạn có muốn mua thêm vé số???")
+            if(KT){
+                randomVeso()
+                document.write("<br>")
+                count++
+                alert("Số vé số hiện tại của bạn là:  "+count )
+            }
+            else
+                break
+        }
+        if(count==4)
+            alert("Bạn đã đạt giới hạn")
+    }
+    function luaChon(){
+        document.write("Bạn có thể tự chọn vé số hoặc random vé số!!!<br>")
+        document.write("<button onclick='tiepTuc()'>"+"Random"+"</button>")
+        document.write("<button onclick='soLuot()'>"+"Tự chọn"+"</button>")
+    }
+    luaChon()
+
+</script>
+</body>
+</html>

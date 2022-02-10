@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cao = parseInt(prompt("Nhap vao chieu cao hinh chu nhat"))
+    let dai = parseInt(prompt("Nhap vao chieu rong hinh chu nhat"))
+    let array = new Array(cao)
+    for(let i= 0; i<cao;i++) {
+        let array = new Array(dai)
+        for (let j = 0; j < dai; j++) {
+            if (i == 0 || j == 0 || i==cao-1 || j == dai-1)
+                document.write("*")
+            else
+                document.write("&nbsp")
+        }
+        document.write("<br>")
+    }
+
+</script>
+</body>
+</html>

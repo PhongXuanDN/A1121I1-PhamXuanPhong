@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arrayChu = new Array("không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín")
+    let inputSo = parseInt(prompt("Nhập vào một số bất kì: "))
+    let array = new Array()
+    let j=0
+    while(inputSo!=1){
+        let a = inputSo % 10
+        console.log(a)
+        for(let i = 0; i<10;i++){
+            if(i==a) {
+                array[j] = arrayChu[i]
+                j++
+            }
+        }
+        inputSo = inputSo/10
+        console.log(inputSo)
+
+    }
+    for(let i = length-1;i>=0;i--){
+        document.write(array[i])
+    }
+</script>
+</body>
+</html>

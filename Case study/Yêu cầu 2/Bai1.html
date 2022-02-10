@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<script>
+    let soTien = parseInt(prompt("Nhập vào số tiền lương"))
+    let thueThuNhap
+    if(soTien >=15){
+        thueThuNhap = soTien * 20 / 100
+    } else if(soTien>7 && soTien<15){
+        thueThuNhap = soTien * 10 / 100
+    }
+    else
+        thueThuNhap = soTien * 5 / 100
+    let luongRong = soTien - thueThuNhap
+    alert("Thuế thu nhập của nhân viên đó là: "+thueThuNhap)
+    alert("Lương rồng của nhân viên đó là: "+ luongRong)
+
+</script>
+</body>
+</html>

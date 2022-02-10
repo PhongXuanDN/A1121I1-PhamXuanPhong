@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1,2,3,4,5]
+    let b = [1,2,3]
+
+    let h =0
+    let c = new Array();
+    for(let i = 0;i<a.length;i++){
+        let check = true
+        for(let j =0 ; j<b.length;j++){
+            if(a[i]==b[j]){
+                check = false
+
+            }
+        }
+        console.log(check)
+        if(check){
+           c[h] = a[i]
+            h++
+        }
+    }
+    document.write("missingValue(A,B) = ")
+    for(let i = 0 ;i<c.length;i++)
+        document.write(c[i]+",")
+</script>
+</body>
+</html>

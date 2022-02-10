@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập chiều dài của mảng: "))
+    let column = parseInt(prompt("Nhập chiều cao của mảng: "))
+    let array = new Array()
+    for(let i = 0; i<row;i++) {
+        array[i] = []
+        for (let j = 0; j < column; j++) {
+            array[i][j] = parseInt(prompt("Nhập vào phần tử array[" + i + "][" + j + "]= "))
+        }
+    }
+    for(let i = 0; i<row;i++){
+        for(let j=0 ; j<column;j++ ){
+            document.write("["+i+"]["+j+"]= "+array[i][j]+";")
+        }
+        document.write("<br>")
+    }
+    let sumChan = 0
+    for(let i = 0; i<row;i++){
+        for(let j=0 ; j<column;j++ ){
+            if(array[i][j]%2==0)
+                sumChan = sumChan + array[i][j]
+        }
+    }
+    document.write("Tổng các số chẵn trong mảng là: "+sumChan)
+</script>
+</body>
+</html>

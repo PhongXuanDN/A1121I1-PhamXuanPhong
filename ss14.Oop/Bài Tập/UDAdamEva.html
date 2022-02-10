@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(khoiluong) {
+            this.khoiluong = khoiluong
+        }
+        getKhoiLuong(){
+            return this.khoiluong
+        }
+        setKhoiluong(kluong){
+            this.khoiluong = kluong
+        }
+        giamKL(){
+            this.khoiluong--;
+        }
+
+    }
+    class Human{
+        constructor(ten, gtinh, cannang) {
+            this.ten = ten
+            this.gtinh = gtinh
+            this.cannang = cannang
+        }
+        getTen(){
+            return this.ten
+        }
+        setTen(tenMoi){
+            this.ten = tenMoi
+        }
+        getGtinh(){
+            return this.gtinh
+        }
+        setGtinh(gioitinh){
+            this.gtinh = gioitinh
+        }
+        setCnang(cNang){
+            this.cannang = cNang
+        }
+        getCnang(){
+            return this.cannang
+        }
+        getNoi(chuoiTN){
+            console.log(chuoiTN)
+            return chuoiTN
+        }
+        checkApple(Apple){
+            if(Apple<1)
+                return false
+            else
+                return true
+        }
+        eat(Apple) {
+            if (this.checkApple(Apple)) {
+                this.cannang++;
+                Apple.giamKL();
+            }
+            else
+                alert("Đã ăn hết quả táo!!!")
+        }
+        getKLQuatao(){
+
+        }
+        say(String){
+            document.write(String)
+        }
+0
+
+    }
+    let Adam = new Human("Tay","Nam","25")
+    document.write(Adam.getTen()+ "<br>")
+    document.write(Adam.getGtinh()+ "<br>")
+    document.write(Adam.getCnang()+ "<br>")
+    Adam.say("Chào tôi là : Adam")
+    let apple1 = new Apple(10)
+    let KLtao = apple1.getKhoiLuong()
+    Adam.eat(apple1)
+    document.write(apple1.getKhoiLuong())
+
+
+
+
+
+</script>
+</body>
+</html>
